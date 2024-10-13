@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
 :root {
-    --green: green;
-    --black: #130f40;
+    --green: rgb(182, 0, 106);
+    --black: #05013f;
     --light-color: #666;
     --box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
     --border: 2rem solid rgba(0, 0, 0, 0.1);
@@ -33,7 +33,7 @@ body {
 }
 
 section {
-    padding: 2rem 9%;
+    padding: 1rem 6%;
 }
 
 /* Button Styling */
@@ -313,101 +313,231 @@ section {
     z-index: 1002; /* Adjusted z-index */
 }
 
-.home {
-    border: 1px solid;
+/* Banner Section Styles */
+.banner-section {
+    position: relative;
+    width: 100%; /* Full width */
+    height: 600px; /* Increased height of the banner */
+    background: url('images/bnnr.png') no-repeat center center; /* Background image */
+    background-size: cover; /* Cover the entire section */
     display: flex;
-    justify-content: center;
-    background: url(../Images\banner.jpeg);
-    background-position: center;
-    background-size: cover;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-    height: auto;
-    
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+    color: white; /* Text color */
+    margin-bottom: 2rem; /* Reduced bottom margin for less space between sections */
 }
 
-.home .content {
-    border: 1px solid;
+.banner-content {
+    background: rgb(37, 37, 37); /* Semi-transparent background for better readability */
+    padding: 20px; /* Padding around the text */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.banner-content h3 {
+    font-size: 2.5rem; /* Increased size of the main heading */
+    margin: 0; /* No margin */
+}
+
+.banner-content h3 span {
+    color: #ffba08; /* Highlight color for 'Unique Gifts' */
+}
+
+.banner-content p {
+    font-size: 1.5rem; /* Increased size of the paragraph text */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+.banner-content h5 {
+    font-size: 1.8rem; /* Increased size of the subheading */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+.btn {
+    background-color: #d000b1; /* Button color */
+    color: white; /* Text color for the button */
+    padding: 15px 30px; /* Increased padding for the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for the button */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.btn:hover {
+    background-color: green; /* Change color on hover */
+}
+
+/* Item Section Styles */
+.item-section {
+    padding: 2rem 6%; /* Reduced padding to minimize the gap */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Border around the item section */
+    border-radius: 10px; /* Rounded corners for the section */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem; /* Reduced gap between items */
+    background: #fff; /* White background for the section */
+}
+
+.item {
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
     text-align: center;
-    
+    transition: transform .3s ease;
 }
 
-.home .content h3{
+.item:hover {
+    transform: translateY(-5px); /* Elevate the item on hover */
+}
+
+.item img {
+    width: 100%;
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.item .content {
+    padding: 1rem;
+}
+
+.item .content h3 {
+    font-size: 1.8rem;
     color: var(--black);
-    font-size: 3rem;
+    margin: 0.5rem 0;
 }
 
-.home .content h3 span {
+.item .content p {
+    font-size: 1.4rem;
+    color: var(--light-color);
+    margin: 0.5rem 0;
+}
+
+.item .content .price {
+    font-size: 1.6rem;
+    font-weight: bold;
     color: var(--green);
-    font-size: 3rem;
-    padding:  1rem 0;
-    line-height: 1.8;
 }
 
-.home .content p{
+.item .content .btn {
+    margin-top: 1rem;
+    padding: .6rem 2rem;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: .5rem;
+    background: var(--green);
+    color: #fff;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.item .content .btn:hover {
+    background: darkgreen;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: var(--black);
+    color: #fff;
+    padding: 4rem 6%;
+    text-align: center;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.footer-section {
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-section h3 span {
+    color: var(--green);
+}
+
+.footer-section p {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 1rem;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
     font-size: 1.5rem;
-    padding: auto;
 }
 
-.home .content h5{
-    color: var(--black);
-    font-size: 1.7rem;
-    padding-top: 20px;
+.footer-section ul li a:hover {
+    color: var(--green);
 }
 
-@media (max-width: 991px) {
-    html {
-        font-size: 55%;
-    }
+.footer-section .btn {
+    background-color: var(--green);
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
 
-    .header {
-        padding: 2rem;
-    }
-    section {
-        padding: 2rem;
-    }
+.footer-section .btn:hover {
+    background-color: #ffba08;
+}
+
+.footer-section form input {
+    padding: 1rem;
+    width: 70%;
+    margin-right: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.footer-section form input:focus {
+    outline: none;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom p {
+    font-size: 1.4rem;
+    color: #ccc;
+}
+
+.footer-bottom .social-icons a {
+    color: #fff;
+    margin-left: 1rem;
+    font-size: 2rem;
+}
+
+.footer-bottom .social-icons a:hover {
+    color: var(--green);
 }
 
 @media (max-width: 768px) {
-    html {
-        font-size: 55%;
-    }
-
-    .header {
-        padding: 2rem;
-    }
-
-    #menu-btn {
-        display: inline-block;
-    }
-
-    .nav-bar {
-        position: fixed;
-        top: 11%;
-        right: -100%;
-        width: 100%;
-        background: #fff;
-        padding: 2rem;
-        box-shadow: var(--box-shadow);
-        display: flex;
+    .footer-bottom {
         flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-        transition: right .4s linear;
-        z-index: 1001; /* Adjusted z-index */
-    }
-
-    .nav-bar.active {
-        right: 0;
-    }
-
-    .header .icons {
-        gap: .5rem;
-    }
-}
-
-@media (max-width: 450px) {
-    html {
-        font-size: 50%;
+        gap: 1rem;
     }
 }
