@@ -60,9 +60,13 @@
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
-            document.getElementById('responseMessage').innerHTML = Thank you, ${name}! We will get back to you at ${email} soon.;
+
+            // Use backticks for string interpolation
+            document.getElementById('responseMessage').innerHTML = `Thank you, ${name}! We will get back to you at ${email} soon.`;
+
+            // Reset the form after submission
             document.getElementById('contactForm').reset();
         }
     </script>
-    </body>
-    </html>
+</body>
+</html>
