@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Contact Us Section */
+        .contact-section {
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .contact-section form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .contact-section input, 
+        .contact-section textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .contact-section button {
+            background-color: #ff6347;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contact Us Section -->
+    <div class="contact-section">
+        <h3>Contact Us</h3>
+        <form id="contactForm" onsubmit="submitForm(event)">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="responseMessage"></p>
+    </div>
+
+    <script>
+        // Handle form submission
+        function submitForm(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            document.getElementById('responseMessage').innerHTML = Thank you, ${name}! We will get back to you at ${email} soon.;
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+    </body>
+    </html>

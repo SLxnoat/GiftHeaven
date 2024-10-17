@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 20px;
+            background-color: #fff;
+            margin-top: 20px;
+        }
+
+        .faq-question {
+            cursor: pointer;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #ddd;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- FAQ Section -->
+    <div class="faq-section">
+        <h3>Frequently Asked Questions</h3>
+
+        <div class="faq-question" onclick="toggleFaq(0)">
+            What is the delivery time for items?
+        </div>
+        <div class="faq-answer">
+            Delivery takes between 3-5 business days depending on your location.
+        </div>
+
+        <div class="faq-question" onclick="toggleFaq(1)">
+            Do you offer gift wrapping services?
+        </div>
+        <div class="faq-answer">
+            Yes, we offer complimentary gift wrapping on all orders!
+        </div>
+
+        <div class="faq-question" onclick="toggleFaq(2)">
+            Can I return a gift item?
+        </div>
+        <div class="faq-answer">
+            Yes, returns are accepted within 30 days of purchase.
+        </div>
+    </div>
+    <script>
+        // Toggle FAQ answers
+        function toggleFaq(index) {
+            const answers = document.querySelectorAll('.faq-answer');
+            answers[index].style.display = answers[index].style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+</html>
