@@ -73,6 +73,77 @@
 </head>
 <body>
 
+    <header class="header">
+        <a href="#" class="logo">
+            <i class="fa fa-gift" aria-hidden="true"></i> GiftHeaven
+        </a>
+        <nav class="nav-bar">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="About us.html">About Us</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact-us.html">Contact Us</a>
+        </nav>
+        <div class="icons">
+            <div class="fa fa-bars" id="menu-btn"></div> <!-- Menu Bar Icon -->
+            <div class="fa fa-search" id="search-btn"></div>
+            <div class="fa fa-shopping-cart" id="cart-btn"></div>
+            <div class="fa fa-user" id="user-btn"></div>
+        </div>
+
+        <!-- Search Form -->
+        <form class="search-form">
+            <input type="search" id="search-box" placeholder="Search here....">
+            <label for="search-box" class="fa fa-search"></label>
+        </form>
+
+        <!-- Shopping Cart -->
+        <div class="shopping-cart">
+            <div class="box">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+                <img src="images\doll1.png" alt="Flying Doll">
+                <div class="content">
+                    <h3>Flying Doll</h3>
+                    <span class="price">LKR 1300/=</span>
+                    <span class="Quantity"> Qty : 1</span>
+                </div>
+            </div> 
+
+            <div class="box">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+                <img src="images\handbag1.png" alt="Black Handbag">
+                <div class="content">
+                    <h3>Black Handbag</h3>
+                    <span class="price">LKR 4200/=</span>
+                    <span class="Quantity"> Qty : 1</span>
+                </div>
+            </div> 
+
+            <div class="box">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+                <img src="images\teddy1.png" alt="Cute Teddy">
+                <div class="content">
+                    <h3>Cute Teddy</h3>
+                    <span class="price">LKR 2500/=</span>
+                    <span class="Quantity"> Qty : 1</span>
+                </div>
+            </div> 
+
+            <div class="total">Total: LKR 8000/=</div>
+            <a href="#" class="btn">Checkout</a>
+        </div>
+
+        <!-- User Login Form --> 
+        <form action="#" class="login-form">
+            <h3>login now</h3>
+            <input type="email" placeholder="enter your email" class="box">
+            <input type="password" placeholder="enter password" class="box">
+            <p>Forgot your password? <a href="#">Click Here</a></p>
+            <p>Don't have an account? <a href="#">Create Now</a></p>
+            <input type="submit" value="login now" class="btn">
+        </form>
+    </header>
+
     <!-- FAQ Section -->
     <div class="faq-section">
         <h3>Frequently Asked Questions</h3>
@@ -156,6 +227,52 @@
             }
         }
     </script>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h3>About <span>GiftHeaven</span></h3>
+            <p>"Where your gifting dreams come true. Discover the perfect gifts for every occasion with our curated collection designed to make your loved ones smile."</p>
+        </div>
+
+        <div class="footer-section quick-links">
+            <h3>Quick <span>Links</span></h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Gift Builder</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section contact-info">
+            <h3>Contact <span>Us</span></h3>
+            <p><i class="fa fa-phone" aria-hidden="true"></i> +94 123 456 789</p>
+            <p><i class="fa fa-envelope" aria-hidden="true"></i> info@giftheaven.com</p>
+            <p><i class="fa fa-map-marker" aria-hidden="true"></i> 123 Gift Lane, Malabe, Sri Lanka</p>
+        </div>
+
+        <div class="footer-section newsletter">
+            <h3>Join Our <span>Newsletter</span></h3>
+            <p>Get the latest updates, exclusive offers, and more delivered to your inbox.</p>
+            <form>
+                <input type="email" placeholder="Enter your email" required>
+                <button class="btn">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 GiftHeaven. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></i></a>
+            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></i></a>
+            <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
