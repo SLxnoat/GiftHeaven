@@ -7,9 +7,10 @@
 
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- Link to CSS File -->
-    <link rel="stylesheet" type="text/css" href="css\style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
@@ -21,7 +22,7 @@
         <nav class="nav-bar">
             <a href="index.html">Home</a>
             <a href="shop.html">Shop</a>
-            <a href="About us.html">About Us</a>
+            <a href="about-us.html">About Us</a>
             <a href="faq.html">FAQ</a>
             <a href="contact-us.html">Contact Us</a>
         </nav>
@@ -34,54 +35,58 @@
             </a>
             
             <div class="fa fa-user" id="user-btn"></div>
-          </div>
-
-        <!-- Search Form -->
-        <form class="search-form">
-            <input type="search" id="search-box" placeholder="Search here....">
-            <label for="search-box" class="fa fa-search"></label>
-        </form>
-
-       
-
-        <!-- User Login Form --> 
-        <form action="#" class="login-form">
-            <h3>login now</h3>
-            <input type="email" placeholder="enter your email" class="box">
-            <input type="password" placeholder="enter password" class="box">
-            <p>Forgot your password? <a href="#">Click Here</a></p>
-            <p>Don't have an account? <a href="#">Create Now</a></p>
-            <input type="submit" value="login now" class="btn">
-        </form>
+        </div>
     </header>
     <!-- Header Section End -->
   
-</section>
+    <!-- Cart Section -->
+    <section id="cart-container" class="container my-5">
+        <h2 class="text-center">Your Cart</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Remove</th>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                    <td><img src="images/doll1.png" alt="Flying Doll" width="50"></td>
+                    <td><h5>Flying Doll</h5></td>
+                    <td><h5>LKR 1300/=</h5></td>
+                    <td><input class="w-25 pl-1" type="number" value="1"></td>
+                    <td><h5>LKR 1300/=</h5></td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                    <td><img src="images/handbag1.png" alt="Black Handbag" width="50"></td>
+                    <td><h5>Black Handbag</h5></td>
+                    <td><h5>LKR 4200/=</h5></td>
+                    <td><input class="w-25 pl-1" type="number" value="1"></td>
+                    <td><h5>LKR 4200/=</h5></td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                    <td><img src="images/teddy1.png" alt="Cute Teddy" width="50"></td>
+                    <td><h5>Cute Teddy</h5></td>
+                    <td><h5>LKR 2500/=</h5></td>
+                    <td><input class="w-25 pl-1" type="number" value="1"></td>
+                    <td><h5>LKR 2500/=</h5></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="total my-5 text-right"><h4>Total: LKR 8000/=</h4></div>
+        <div class="text-right">
+            <a href="#" class="btn btn-primary">Checkout</a>
+        </div>
+    </section>
 
-<section id="cart-container" class="container my-5">
-    <table width="100%">
-        <thead>
-            <tr>
-                <td>Remove</td>
-                <td>Image</td>
-                <td>Product</td>
-                <td>Price</td>
-                <td>Quantity</td>
-                <td>Total</td>
-            </tr>
-        </thead>
-
-        <tbody>
-            <!-- Products will be inserted here dynamically -->
-        </tbody>
-    </table>
-  </section>
-
-
-
-     
-
-    
     <!-- Footer Section-->
     <footer class="footer">
         <div class="footer-container">
@@ -121,17 +126,17 @@
         <div class="footer-bottom">
             <p>&copy; 2024 GiftHeaven. All Rights Reserved.</p>
             <div class="social-icons">
-                <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></i></a>
+                <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
                 <a href="#"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
             </div>
         </div>
     </footer>
-     <!-- Footer Section End -->
+    <!-- Footer Section End -->
 
-     <!-- JavaScript -->
-     <script>
+    <!-- JavaScript for cart functionality -->
+    <script>
         // Function to load cart items from localStorage and display them in the cart
         function loadCart() {
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -143,7 +148,7 @@
                 // Create a row for each product
                 const row = `
                     <tr>
-                        <td><a href="#" onclick="removeItem(${index})"><i class="fa-solid fa-trash"></i></a></td>
+                        <td><a href="#" onclick="removeItem(${index})"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
                         <td><img src="${product.image}" alt="${product.name}" width="50"></td>
                         <td><h5>${product.name}</h5></td>
                         <td><h5>Rs. ${product.price}</h5></td>
@@ -174,8 +179,5 @@
         // Load cart when the page loads
         window.onload = loadCart;
     </script>
-
-    <!-- JavaScript at the end of the body -->
-    <script src="scripts\script.js"></script>
 </body>
 </html>
