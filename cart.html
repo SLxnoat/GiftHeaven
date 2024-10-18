@@ -130,6 +130,51 @@
     </footer>
      <!-- Footer Section End -->
 
+     <!-- JavaScript -->
+     <script>
+        // Function to load cart items from localStorage and display them in the cart
+        function loadCart() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartContainer = document.querySelector("tbody");
+
+            cart.forEach((product, index) => {
+                const totalPrice = product.price * product.quantity;
+
+                // Create a row for each product
+                const row = `
+                    <tr>
+                        <td><a href="#" onclick="removeItem(${index})"><i class="fa-solid fa-trash"></i></a></td>
+                        <td><img src="${product.image}" alt="${product.name}" width="50"></td>
+                        <td><h5>${product.name}</h5></td>
+                        <td><h5>Rs. ${product.price}</h5></td>
+                        <td><input class="w-25 pl-1" type="number" value="${product.quantity}" onchange="updateQuantity(${index}, this.value)"></td>
+                        <td><h5>Rs. ${totalPrice}</h5></td>
+                    </tr>
+                `;
+                cartContainer.innerHTML += row;
+            });
+        }
+
+        // Function to remove a product from the cart
+        function removeItem(index) {
+            let cart = JSON.parse(localStorage.getItem('cart'));
+            cart.splice(index, 1); // Remove item at index
+            localStorage.setItem('cart', JSON.stringify(cart)); // Save updated cart
+            location.reload(); // Reload page to update cart
+        }
+
+        // Function to update the quantity of a product
+        function updateQuantity(index, newQuantity) {
+            let cart = JSON.parse(localStorage.getItem('cart'));
+            cart[index].quantity = parseInt(newQuantity);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            location.reload(); // Reload page to update cart totals
+        }
+
+        // Load cart when the page loads
+        window.onload = loadCart;
+    </script>
+
     <!-- JavaScript at the end of the body -->
     <script src="scripts\script.js"></script>
 </body>
