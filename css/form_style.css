@@ -1,0 +1,135 @@
+/* Root Variables */
+:root {
+    --primary-color: #d000b1;
+    --secondary-color: #ffba08;
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --input-bg: #fff;
+    --input-border: #ddd;
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Signup Section */
+.signup-section {
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.signup-container {
+    text-align: center;
+}
+
+.signup-container h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.signup-container p {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+/* Form Styling */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: 1px solid var(--input-border);
+    border-radius: 5px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 1.4rem;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+    top: 0;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.input-box input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Checkbox */
+.checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.checkbox input {
+    margin-right: 1rem;
+}
+
+/* Signup Button */
+.btn-signup {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-signup:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Links */
+.signup-container p a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.signup-container p a:hover {
+    text-decoration: underline;
+}
