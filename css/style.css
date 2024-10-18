@@ -322,19 +322,20 @@ section {
 .banner-section {
     position: relative;
     width: 100%; /* Full width */
-    height: 600px; /* Increased height of the banner */
-    background: url('images/bnnr.png') no-repeat center center; /* Background image */
-    background-size: cover; /* Cover the entire section */
+    height: 600px; /* Height of the banner */
+    background-image: url(banner\parallax.jpg); /* Add your background image */
+    background-position: center;
+    background-size: cover; /* Ensures the image covers the section */
     display: flex;
     align-items: center; /* Center content vertically */
     justify-content: center; /* Center content horizontally */
     text-align: center; /* Center text */
     color: white; /* Text color */
-    margin-bottom: 2rem; /* Reduced bottom margin for less space between sections */
+    margin-bottom: 2rem; /* Bottom margin for spacing */
 }
 
 .banner-content {
-    background: rgb(37, 37, 37); /* Semi-transparent background for better readability */
+    background: rgba(37, 37, 37, 0.7); /* Semi-transparent background for readability */
     padding: 20px; /* Padding around the text */
     border-radius: 10px; /* Rounded corners */
 }
