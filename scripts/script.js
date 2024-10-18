@@ -41,6 +41,6 @@ menuBtn.onclick = () => {
 window.onscroll = () => {
     navbar.classList.remove('active');
     searchForm.classList.remove('active');
-    shoppingCart.classList.remove('active');
+    //shoppingCart.classList.remove('active');
     userForm.classList.remove('active');
 };
