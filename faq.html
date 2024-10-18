@@ -148,7 +148,7 @@
             const question = document.getElementById('userQuestion').value;
             const answer = document.getElementById('userAnswer').value;
             if (question && answer) {
-                document.getElementById('responseMessage').innerHTML = Thank you for your input! You asked: "${question}" and answered: "${answer}".;
+                document.getElementById('responseMessage').innerHTML = `Thank you for your input! You asked: "${question}" and answered: "${answer}".`;
                 document.getElementById('userQuestion').value = '';
                 document.getElementById('userAnswer').value = '';
             } else {
