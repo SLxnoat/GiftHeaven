@@ -15,7 +15,7 @@ document.querySelector('#search-btn').onclick = () => {
 
 // Toggle shopping cart
 document.querySelector('#cart-btn').onclick = () => {
-    shoppingCart.classList.toggle('active');
+    //shoppingCart.classList.toggle('active');
     navbar.classList.remove('active');  // Close navbar when cart is active
     searchForm.classList.remove('active');
     userForm.classList.remove('active');
@@ -41,6 +41,6 @@ menuBtn.onclick = () => {
 window.onscroll = () => {
     navbar.classList.remove('active');
     searchForm.classList.remove('active');
-    shoppingCart.classList.remove('active');
+    //shoppingCart.classList.remove('active');
     userForm.classList.remove('active');
 };
