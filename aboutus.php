@@ -141,75 +141,35 @@ img{
 
         <!-- Header Section -->
         <header class="header">
-            <a href="#" class="logo">
-                <i class="fa fa-gift" aria-hidden="true"></i> GiftHeaven
+        <a href="#" class="logo">
+            <i class="fa fa-gift" aria-hidden="true"></i> GiftHeaven
+        </a>
+        <nav class="nav-bar">
+            <a href="index.php">Home</a>
+            <a href="shop.php">Shop</a>
+            <a href="aboutus.php">About Us</a>
+            <a href="faq.php">FAQ</a>
+            <a href="contact-us.php">Contact Us</a>
+        </nav>
+        
+        <div class="icons">
+            <div class="fa fa-bars" id="menu-btn"></div> <!-- Menu Bar Icon -->
+            <div class="fa fa-search" id="search-btn"></div>
+            
+            <a href="cart.php">
+                <div class="fa fa-shopping-cart" id="cart-btn"></div> <!-- Cart Icon with link -->
             </a>
-            <nav class="nav-bar">
-                <a href="index.html">Home</a>
-                <a href="shop.html">Shop</a>
-                <a href="About us.html">About Us</a>
-                <a href="faq.html">FAQ</a>
-                <a href="contact-us.html">Contact Us</a>
-            </nav>
-            <div class="icons">
-                <div class="fa fa-bars" id="menu-btn"></div> <!-- Menu Bar Icon -->
-                <div class="fa fa-search" id="search-btn"></div>
-                <div class="fa fa-shopping-cart" id="cart-btn"></div>
-                <div class="fa fa-user" id="user-btn"></div>
-            </div>
-    
-            <!-- Search Form -->
-            <form class="search-form">
-                <input type="search" id="search-box" placeholder="Search here....">
-                <label for="search-box" class="fa fa-search"></label>
-            </form>
-    
-            <!-- Shopping Cart -->
-            <div class="shopping-cart">
-                <div class="box">
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                    <img src="images\doll1.png" alt="Flying Doll">
-                    <div class="content">
-                        <h3>Flying Doll</h3>
-                        <span class="price">LKR 1300/=</span>
-                        <span class="Quantity"> Qty : 1</span>
-                    </div>
-                </div> 
-    
-                <div class="box">
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                    <img src="images\handbag1.png" alt="Black Handbag">
-                    <div class="content">
-                        <h3>Black Handbag</h3>
-                        <span class="price">LKR 4200/=</span>
-                        <span class="Quantity"> Qty : 1</span>
-                    </div>
-                </div> 
-    
-                <div class="box">
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                    <img src="images\teddy1.png" alt="Cute Teddy">
-                    <div class="content">
-                        <h3>Cute Teddy</h3>
-                        <span class="price">LKR 2500/=</span>
-                        <span class="Quantity"> Qty : 1</span>
-                    </div>
-                </div> 
-    
-                <div class="total">Total: LKR 8000/=</div>
-                <a href="#" class="btn">Checkout</a>
-            </div>
-    
-            <!-- User Login Form --> 
-            <form action="#" class="login-form">
-                <h3>login now</h3>
-                <input type="email" placeholder="enter your email" class="box">
-                <input type="password" placeholder="enter password" class="box">
-                <p>Forgot your password? <a href="#">Click Here</a></p>
-                <p>Don't have an account? <a href="#">Create Now</a></p>
-                <input type="submit" value="login now" class="btn">
-            </form>
-        </header>
+            
+            <div class="fa fa-user" id="user-btn"></div><a href="login.php">
+            <div class="fa fa-user" id="user-btn"></div></a>
+          </div>
+
+        <!-- Search Form -->
+        <form class="search-form">
+            <input type="search" id="search-box" placeholder="Search here....">
+            <label for="search-box" class="fa fa-search"></label>
+        </form>
+    </header>
         <!-- Header Section End -->
 
     <section class="hero">

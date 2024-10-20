@@ -46,48 +46,38 @@
 
         <!--Navigation-->
             <!-- Header Section -->
-    <header class="header">
-      <a href="#" class="logo">
-          <i class="fa fa-gift" aria-hidden="true"></i> GiftHeaven
-      </a>
-      <nav class="nav-bar">
-        <a href="index.html">Home</a>
-        <a href="shop.html">Shop</a>
-        <a href="About us.html">About Us</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact-us.html">Contact Us</a>
-    </nav>
-    <div class="icons">
-      <div class="fa fa-bars" id="menu-btn"></div> <!-- Menu Bar Icon -->
-      <div class="fa fa-search" id="search-btn"></div>
-      
-      <a href="cart.html">
-          <div class="fa fa-shopping-cart" id="cart-btn"></div> <!-- Cart Icon with link -->
-      </a>
-      
-      <div class="fa fa-user" id="user-btn"></div>
-    </div>
-  
+            <header class="header">
+        <a href="#" class="logo">
+            <i class="fa fa-gift" aria-hidden="true"></i> GiftHeaven
+        </a>
+        <nav class="nav-bar">
+            <a href="index.php">Home</a>
+            <a href="shop.php">Shop</a>
+            <a href="aboutus.php">About Us</a>
+            <a href="faq.php">FAQ</a>
+            <a href="contact-us.php">Contact Us</a>
+        </nav>
+        
+        <div class="icons">
+            <div class="fa fa-bars" id="menu-btn"></div> <!-- Menu Bar Icon -->
+            <div class="fa fa-search" id="search-btn"></div>
+            
+            <a href="cart.php">
+                <div class="fa fa-shopping-cart" id="cart-btn"></div> <!-- Cart Icon with link -->
+            </a>
+            
+            <a href="login.php">
+            <div class="fa fa-user" id="user-btn"></div></a>
+          </div>
 
-      <!-- Search Form -->
-      <form class="search-form">
-          <input type="search" id="search-box" placeholder="Search here....">
-          <label for="search-box" class="fa fa-search"></label>
-      </form>
+        <!-- Search Form -->
+        <form class="search-form">
+            <input type="search" id="search-box" placeholder="Search here....">
+            <label for="search-box" class="fa fa-search"></label>
+        </form>
 
-    
-    
-      
-      <!-- User Login Form --> 
-      <form action="#" class="login-form">
-          <h3>login now</h3>
-          <input type="email" placeholder="enter your email" class="box">
-          <input type="password" placeholder="enter password" class="box">
-          <p>Forgot your password? <a href="#">Click Here</a></p>
-          <p>Don't have an account? <a href="#">Create Now</a></p>
-          <input type="submit" value="login now" class="btn">
-      </form>
-  </header>
+        
+    </header>
   <!-- Header Section End -->
 
 
@@ -100,7 +90,7 @@
             <p>Here you can check out our new products with fair price on promo</p>
           </div>
           <div class="row mx-auto container">
-            <div onclick="window.location.href='sproduct.html'" class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='sproduct.php'" class="product text-center col-lg-3 col-md-4 col-12">
               <img class="img-fluid mb-3" src="shop/1.jpg" alt="">
               <div class="star">
                 <i class="fa-solid fa-star"></i>
@@ -113,7 +103,7 @@
               <h4 class="p-price">Rs 5,950</h4>
               <button class="buy-btn">Buy Now</button>
             </div>
-            <div onclick="window.location.href='sproduct1.html'" class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='sproduct2.php'" class="product text-center col-lg-3 col-md-4 col-12">
               <img class="img-fluid mb-3" src="shop/2.jpg" alt="">
               <div class="star">
                 <i class="fa-solid fa-star"></i>
@@ -126,7 +116,7 @@
               <h4 class="p-price">Rs 1,250</h4>
               <button class="buy-btn">Buy Now</button>
             </div>
-            <div onclick="window.location.href='sproduct2.html'" class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='sproduct1.php'" class="product text-center col-lg-3 col-md-4 col-12">
               <img class="img-fluid mb-3" src="watches/13.jpg" alt="">
               <div class="star">
                 <i class="fa-solid fa-star"></i>
@@ -139,7 +129,7 @@
               <h4 class="p-price">Rs 4,250</h4>
               <button class="buy-btn">Buy Now</button>
             </div>
-            <div onclick="window.location.href='sproduct3.html'" class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='sproduct3.php'" class="product text-center col-lg-3 col-md-4 col-12">
               <img class="img-fluid mb-3" src="shop/4.jpg" alt="">
               <div class="star">
                 <i class="fa-solid fa-star"></i>

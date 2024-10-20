@@ -59,20 +59,24 @@
             <i class="fa fa-gift" aria-hidden="true"></i> GiftHeaven
         </a>
         <nav class="nav-bar">
-            <a href="index.html">Home</a>
-            <a href="shop.html">Shop</a>
-            <a href="About us.html">About Us</a>
-            <a href="faq.html">FAQ</a>
-            <a href="contact-us.html">Contact Us</a>
+            <a href="index.php">Home</a>
+            <a href="shop.php">Shop</a>
+            <a href="aboutus.php">About Us</a>
+            <a href="faq.php">FAQ</a>
+            <a href="contact-us.php">Contact Us</a>
         </nav>
+        
         <div class="icons">
-            <div class="fa fa-bars" id="menu-btn"></div>
+            <div class="fa fa-bars" id="menu-btn"></div> <!-- Menu Bar Icon -->
             <div class="fa fa-search" id="search-btn"></div>
-            <a href="cart.html">
-                <div class="fa fa-shopping-cart" id="cart-btn"></div>
+            
+            <a href="cart.php">
+                <div class="fa fa-shopping-cart" id="cart-btn"></div> <!-- Cart Icon with link -->
             </a>
-            <div class="fa fa-user" id="user-btn"></div>
-        </div>
+            
+            <a href="login.php">
+            <div class="fa fa-user" id="user-btn"></div></a>
+          </div>
 
         <!-- Search Form -->
         <form class="search-form">
@@ -80,15 +84,7 @@
             <label for="search-box" class="fa fa-search"></label>
         </form>
 
-        <!-- User Login Form -->
-        <form action="#" class="login-form">
-            <h3>login now</h3>
-            <input type="email" placeholder="enter your email" class="box">
-            <input type="password" placeholder="enter password" class="box">
-            <p>Forgot your password? <a href="#">Click Here</a></p>
-            <p>Don't have an account? <a href="#">Create Now</a></p>
-            <input type="submit" value="login now" class="btn">
-        </form>
+        
     </header>
     <!-- Header Section End -->
 
@@ -187,36 +183,23 @@
                     <i class="fa-solid fa-star"></i>
                 </div>
                 <h5 class="p-name">Fresh Flower Bouquet</h5>
-                <h4 class="p-price">Rs 1,600</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            <!-- Product 4 -->
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="Featured/4.jpg" alt="Assorted Gourmet Cookies">
-                <div class="star">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
-                <h5 class="p-name">Assorted Gourmet Cookies</h5>
-                <h4 class="p-price">Rs 2,000</h4>
+                <h4 class="p-price">Rs 6,250</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer text-center">
-        <p>GiftHeaven &copy; 2024</p>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT+aAqLJZB3s2c68t6B" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-JZyyaqGk3PGRt6W8DDNTAI6zH9gY9O5E6WDB+Y+xk71qRqlTFF55D3nGk4jc0yK" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-mM1vVf2EjZ5n7gByGf2M9f42fTnLpBGo4sy8hM1KZ9W3jFIS1hftABW5nDdU9z1w" crossorigin="anonymous"></script>
-
     <script>
+        // Image Switcher
+        var MainImg = document.getElementById('MainImg');
+        var smallImgs = document.getElementsByClassName('small-img');
+        for (let i = 0; i < smallImgs.length; i++) {
+            smallImgs[i].onclick = function () {
+                MainImg.src = smallImgs[i].src;
+            };
+        }
+
+        // Add to Cart Function with Redirection to Cart Page
         function addToCart() {
             const size = document.querySelector('.sproduct select').value;
             const quantity = document.querySelector('.sproduct input[type="number"]').value;
@@ -226,19 +209,15 @@
                 return;
             }
 
-            // Normally, you would send this information to your server or add it to a cart array
+            // Display an alert to confirm the item was added
             alert(`Added to cart:\nSize: ${size}\nQuantity: ${quantity}`);
+
+            // Redirect to the cart page with query parameters
+            window.location.href = `cart.php?size=${size}&quantity=${quantity}`;
         }
-
-        // Image switcher for thumbnails
-        const smallImages = document.querySelectorAll('.small-img');
-        const mainImage = document.getElementById('MainImg');
-
-        smallImages.forEach((img) => {
-            img.addEventListener('click', (event) => {
-                mainImage.src = event.target.src;
-            });
-        });
     </script>
+
+    <!-- JavaScript at the end of the body -->
+    <script src="scripts/script.js"></script>
 </body>
 </html>

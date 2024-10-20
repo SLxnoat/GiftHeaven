@@ -12,8 +12,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <!-- Font Awesome CDN -->
-         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         <!-- Font Awesome CDN -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <style>
             .small-img-group {
@@ -50,46 +50,48 @@
     <body>
         <!--Navigation-->
             <!-- Header Section -->
-    <header class="header">
-        <a href="#" class="logo">
-            <i class="fa fa-gift" aria-hidden="true"></i> GiftHeaven
-        </a>
-        <nav class="nav-bar">
-            <a href="index.html">Home</a>
-            <a href="shop.html">Shop</a>
-            <a href="About us.html">About Us</a>
-            <a href="faq.html">FAQ</a>
-            <a href="contact-us.html">Contact Us</a>
-        </nav>
-        <div class="icons">
-            <div class="fa fa-bars" id="menu-btn"></div> <!-- Menu Bar Icon -->
-            <div class="fa fa-search" id="search-btn"></div>
-            
-            <a href="cart.html">
-                <div class="fa fa-shopping-cart" id="cart-btn"></div> <!-- Cart Icon with link -->
+            <header class="header">
+            <a href="#" class="logo">
+                <i class="fa fa-gift" aria-hidden="true"></i> GiftHeaven
             </a>
+            <nav class="nav-bar">
+                <a href="index.php">Home</a>
+                <a href="shop.php">Shop</a>
+                <a href="aboutus.php">About Us</a>
+                <a href="faq.php">FAQ</a>
+                <a href="contact-us.php">Contact Us</a>
+            </nav>
             
-            <div class="fa fa-user" id="user-btn"></div>
+            <div class="icons">
+                <div class="fa fa-bars" id="menu-btn"></div> <!-- Menu Bar Icon -->
+                <div class="fa fa-search" id="search-btn"></div>
+                
+                <a href="cart.php">
+                    <div class="fa fa-shopping-cart" id="cart-btn"></div> <!-- Cart Icon with link -->
+                </a>
+                
+                </a>
+            <a href="login.php">
+            <div class="fa fa-user" id="user-btn"></div></a>
           </div>
+          
 
-        <!-- Search Form -->
-        <form class="search-form">
-            <input type="search" id="search-box" placeholder="Search here....">
-            <label for="search-box" class="fa fa-search"></label>
-        </form>
+            <!-- Search Form -->
+            <form class="search-form">
+                <input type="search" id="search-box" placeholder="Search here....">
+                <label for="search-box" class="fa fa-search"></label>
+            </form>
 
-       
-
-        <!-- User Login Form --> 
-        <form action="#" class="login-form">
-            <h3>login now</h3>
-            <input type="email" placeholder="enter your email" class="box">
-            <input type="password" placeholder="enter password" class="box">
-            <p>Forgot your password? <a href="#">Click Here</a></p>
-            <p>Don't have an account? <a href="#">Create Now</a></p>
-            <input type="submit" value="login now" class="btn">
-        </form>
-    </header>
+            <!-- User Login Form -->
+            <form action="#" class="login-form">
+                <h3>login now</h3>
+                <input type="email" placeholder="enter your email" class="box">
+                <input type="password" placeholder="enter password" class="box">
+                <p>Forgot your password? <a href="#">Click Here</a></p>
+                <p>Don't have an account? <a href="signup.php">Create Now</a></p>
+                <input type="submit" value="login now" class="btn">
+            </form>
+        </header>
     <!-- Header Section End -->
 
 
@@ -97,25 +99,25 @@
         <section class="container sproduct my-5 pt-5">
             <div class="row mt-5">
                 <div class="col-lg-5 col-md-12 col-12">
-                    <img class="img-fluid w-100 pb-1" src="watches/1.jpg" id="MainImg" alt="Main Product Image">
+                    <img class="img-fluid w-100 pb-1" src="shop/1.jpg" id="MainImg" alt="Main Product Image">
                     <div class="small-img-group">
                         <div class="small-img-col">
-                            <img src="watches/2.jpg" width="100%" class="small-img" alt="Product Image 1">
+                            <img src="shop/1.jpg" width="100%" class="small-img" alt="Product Image 1">
                         </div>
                         <div class="small-img-col">
-                            <img src="watches/3.jpg" width="100%" class="small-img" alt="Product Image 2">
+                            <img src="shop/24.jpg" width="100%" class="small-img" alt="Product Image 2">
                         </div>
                         <div class="small-img-col">
-                            <img src="watches/4.jpg" width="100%" class="small-img" alt="Product Image 3">
+                            <img src="shop/25.jpg" width="100%" class="small-img" alt="Product Image 3">
                         </div>
                         <div class="small-img-col">
-                            <img src="watches/5.jpg" width="100%" class="small-img" alt="Product Image 4">
+                            <img src="shop/26.jpg" width="100%" class="small-img" alt="Product Image 4">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 col-12">
-                    <h6>Home / Watches</h6>
-                    <h3 class="py-4">Classical watches</h3>
+                    <h6>Home / T-Shirt</h6>
+                    <h3 class="py-4">Men's Fashion T-Shirts</h3>
                     <h2>Rs. 2500</h2>
                     <select class="my-3">
                         <option>Select Size</option>
@@ -257,8 +259,8 @@
     </footer>
      <!-- Footer Section End -->
 
-    <!-- JavaScript at the end of the body -->
-    <script src="scripts\script.js"></script>
+     <!-- JavaScript at the end of the body -->
+     <script src="scripts\script.js"></script>
         
 
         <!-- Scripts -->
@@ -290,8 +292,8 @@
               // Get product details (you can adjust these values to dynamically match your product info)
               let product = {
                   id: 1, // Example ID, replace with real product ID
-                  name: "Classic Watches", 
-                  price: 4250, 
+                  name: "Emporio Armani Mens T-Shirt ", 
+                  price: 25000,
                   size: document.querySelector('select').value, // Get selected size
                   quantity: parseInt(document.querySelector('input[type="number"]').value), // Get quantity
                   imgSrc: document.getElementById('MainImg').src // Get the current product image
@@ -328,6 +330,7 @@
           }
         </script>
 
-
+          <!-- JavaScript at the end of the body -->
+        <script src="scripts/script.js"></script>
     </body>
 </html>
