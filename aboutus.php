@@ -160,7 +160,7 @@ img{
                 <div class="fa fa-shopping-cart" id="cart-btn"></div> <!-- Cart Icon with link -->
             </a>
             
-            <div class="fa fa-user" id="user-btn"></div><a href="login.php">
+            <a href="login.php">
             <div class="fa fa-user" id="user-btn"></div></a>
           </div>
 
